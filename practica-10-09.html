@@ -144,55 +144,57 @@
         
         function setupBuffers(){
 
+            //var transladar_del_centro = 2
+
             var data = [
 
-                0,0.5, 0.0,    // vértice 1, triangulo 1
-                -0.3, 0, 0.0,    // vértice 2, triangulo 1
-                0.0,0.0, 0.0,     // vértice 3, triangulo 1
+                0.0-0.2,0.5, 0.0,    // vértice 1, triangulo 1
+                -0.3-0.2, 0, 0.0,    // vértice 2, triangulo 1
+                0.0-0.2,0.0, 0.0,     // vértice 3, triangulo 1
 
-                -0.3,-0.3, 0.0,    // vértice 1, triangulo 2
-                0.0,0.0, 0.0,     // vértice 2, triangulo 2
-                -0.3, 0, 0.0,    // vértice 3, triangulo 2
+                -0.3-0.2,-0.3, 0.0,    // vértice 1, triangulo 2
+                0.0-0.2,0.0, 0.0,     // vértice 2, triangulo 2
+                -0.3-0.2, 0, 0.0,    // vértice 3, triangulo 2
 
-                0.0,-0.3, 0.0,    // vértice 1, triangulo 3
-                -0.3,-0.3, 0.0,     // vértice 2, triangulo 3
-                0.0, 0, 0.0,    // vértice 3, triangulo 3
+                0.0-0.2,-0.3, 0.0,    // vértice 1, triangulo 3
+                -0.3-0.2,-0.3, 0.0,     // vértice 2, triangulo 3
+                0.0-0.2, 0, 0.0,    // vértice 3, triangulo 3
 
-                -0.3,-0.8, 0.0,    // vértice 1, triangulo 4
-                0.0,-0.3, 0.0,     // vértice 2, triangulo 4
-                -0.3, -0.3, 0.0,    // vértice 3, triangulo 4
+                -0.3-0.2,-0.8, 0.0,    // vértice 1, triangulo 4
+                0.0-0.2,-0.3, 0.0,     // vértice 2, triangulo 4
+                -0.3-0.2, -0.3, 0.0,    // vértice 3, triangulo 4
 
-                0.0,-0.3, 0.0,    // vértice 1, triangulo 5
-                0.0,-0.8, 0.0,     // vértice 2, triangulo 5
-                -0.3, -0.8, 0.0,    // vértice 3, triangulo 5
+                0.0-0.2,-0.3, 0.0,    // vértice 1, triangulo 5
+                0.0-0.2,-0.8, 0.0,     // vértice 2, triangulo 5
+                -0.3-0.2, -0.8, 0.0,    // vértice 3, triangulo 5
 
-                0.0,-0.3, 0.0,    // vértice 1, triangulo 6
-                0.0,-0.8, 0.0,     // vértice 2, triangulo 6
-                0.3, -0.3, 0.0,    // vértice 3, triangulo 6
+                0.0-0.2,-0.3, 0.0,    // vértice 1, triangulo 6
+                0.0-0.2,-0.8, 0.0,     // vértice 2, triangulo 6
+                0.3-0.2, -0.3, 0.0,    // vértice 3, triangulo 6
 
-                0.3,-0.3, 0.0,    // vértice 1, triangulo 7
-                0.0,-0.8, 0.0,     // vértice 2, triangulo 7
-                0.3, -0.8, 0.0,    // vértice 3, triangulo 7
+                0.3-0.2,-0.3, 0.0,    // vértice 1, triangulo 7
+                0.0-0.2,-0.8, 0.0,     // vértice 2, triangulo 7
+                0.3-0.2, -0.8, 0.0,    // vértice 3, triangulo 7
 
-                0.3,-0.3, 0.0,    // vértice 1, triangulo 8
-                0.3,-0.8, 0.0,     // vértice 2, triangulo 8
-                0.6, -0.3, 0.0,    // vértice 3, triangulo 8
+                0.3-0.2,-0.3, 0.0,    // vértice 1, triangulo 8
+                0.3-0.2,-0.8, 0.0,     // vértice 2, triangulo 8
+                0.6-0.2, -0.3, 0.0,    // vértice 3, triangulo 8
 
-                0.6,-0.3, 0.0,    // vértice 1, triangulo 9
-                0.3,-0.8, 0.0,     // vértice 2, triangulo 9
-                0.6, -0.8, 0.0,    // vértice 3, triangulo 9
+                0.6-0.2,-0.3, 0.0,    // vértice 1, triangulo 9
+                0.3-0.2,-0.8, 0.0,     // vértice 2, triangulo 9
+                0.6-0.2, -0.8, 0.0,    // vértice 3, triangulo 9
 
-                0.3,0.2, 0.0,    // vértice 1, triangulo 10
-                0.3,-0.3, 0.0,     // vértice 2, triangulo 10
-                0.6, 0.2, 0.0,    // vértice 3, triangulo 10
+                0.3-0.2,0.2, 0.0,    // vértice 1, triangulo 10
+                0.3-0.2,-0.3, 0.0,     // vértice 2, triangulo 10
+                0.6-0.2, 0.2, 0.0,    // vértice 3, triangulo 10
 
-                0.6,0.2, 0.0,    // vértice 1, triangulo 11
-                0.3,-0.3, 0.0,     // vértice 2, triangulo 11
-                0.6, -0.3, 0.0,    // vértice 3, triangulo 11
+                0.6-0.2,0.2, 0.0,    // vértice 1, triangulo 11
+                0.3-0.2,-0.3, 0.0,     // vértice 2, triangulo 11
+                0.6-0.2, -0.3, 0.0,    // vértice 3, triangulo 11
 
-                0.6,(0.5+0.2), 0.0,    // vértice 1, triangulo 12
-                (0.6-0.3), 0.2, 0.0,    // vértice 2, triangulo 12
-                0.6,0.2, 0.0     // vértice 3, triangulo 12
+                0.6-0.2,(0.5+0.2), 0.0,    // vértice 1, triangulo 12
+                (0.6-0.3-0.2), 0.2, 0.0,    // vértice 2, triangulo 12
+                0.6-0.2,0.2, 0.0     // vértice 3, triangulo 12
 
             ];
             
