@@ -94,7 +94,7 @@
         function setupWebGL(){
 
             //set the clear color
-            gl.clearColor(0.1, 0.1, 0.2, 1.0);     
+            gl.clearColor(0.1, 0.1, 0.9, 1.0);     
             gl.clear(gl.COLOR_BUFFER_BIT);     
             
             // Establecer el tamano de la ventana
@@ -146,13 +146,54 @@
 
             var data = [
 
-                -0.5,-0.5, 0.0,    // vértice 1, triangulo 1
-                -0.5, 0.5, 0.0,    // vértice 2, triangulo 1
-                0.0,-0.5, 0.0,     // vértice 3, triangulo 1
+                0,0.5, 0.0,    // vértice 1, triangulo 1
+                -0.3, 0, 0.0,    // vértice 2, triangulo 1
+                0.0,0.0, 0.0,     // vértice 3, triangulo 1
 
-                0.0, 0.5, 0.0,     // vértice 1, triangulo 2
-                0.5,-0.5, 0.0,     // vértice 2, triangulo 2
-                0.5, 0.5, 0.0      // vértice 3, triangulo 2
+                -0.3,-0.3, 0.0,    // vértice 1, triangulo 2
+                0.0,0.0, 0.0,     // vértice 2, triangulo 2
+                -0.3, 0, 0.0,    // vértice 3, triangulo 2
+
+                0.0,-0.3, 0.0,    // vértice 1, triangulo 3
+                -0.3,-0.3, 0.0,     // vértice 2, triangulo 3
+                0.0, 0, 0.0,    // vértice 3, triangulo 3
+
+                -0.3,-0.8, 0.0,    // vértice 1, triangulo 4
+                0.0,-0.3, 0.0,     // vértice 2, triangulo 4
+                -0.3, -0.3, 0.0,    // vértice 3, triangulo 4
+
+                0.0,-0.3, 0.0,    // vértice 1, triangulo 5
+                0.0,-0.8, 0.0,     // vértice 2, triangulo 5
+                -0.3, -0.8, 0.0,    // vértice 3, triangulo 5
+
+                0.0,-0.3, 0.0,    // vértice 1, triangulo 6
+                0.0,-0.8, 0.0,     // vértice 2, triangulo 6
+                0.3, -0.3, 0.0,    // vértice 3, triangulo 6
+
+                0.3,-0.3, 0.0,    // vértice 1, triangulo 7
+                0.0,-0.8, 0.0,     // vértice 2, triangulo 7
+                0.3, -0.8, 0.0,    // vértice 3, triangulo 7
+
+                0.3,-0.3, 0.0,    // vértice 1, triangulo 8
+                0.3,-0.8, 0.0,     // vértice 2, triangulo 8
+                0.6, -0.3, 0.0,    // vértice 3, triangulo 8
+
+                0.6,-0.3, 0.0,    // vértice 1, triangulo 9
+                0.3,-0.8, 0.0,     // vértice 2, triangulo 9
+                0.6, -0.8, 0.0,    // vértice 3, triangulo 9
+
+                0.3,0.2, 0.0,    // vértice 1, triangulo 10
+                0.3,-0.3, 0.0,     // vértice 2, triangulo 10
+                0.6, 0.2, 0.0,    // vértice 3, triangulo 10
+
+                0.6,0.2, 0.0,    // vértice 1, triangulo 11
+                0.3,-0.3, 0.0,     // vértice 2, triangulo 11
+                0.6, -0.3, 0.0,    // vértice 3, triangulo 11
+
+                0.6,(0.5+0.2), 0.0,    // vértice 1, triangulo 12
+                (0.6-0.3), 0.2, 0.0,    // vértice 2, triangulo 12
+                0.6,0.2, 0.0     // vértice 3, triangulo 12
+
             ];
             
             trianglesVerticeBuffer = gl.createBuffer();                               // creo el buffer
@@ -161,12 +202,52 @@
         
             var color = [   
                 1.0, 0.0, 0.0,      // r,g,b vertice 1
-                1.0, 1.0, 0.0,
+                1.0, 1.0, 0.0,      // Triangulo 1
                 0.0, 1.0, 0.0,
                 
-                0.0, 1.0, 1.0,
+                0.0, 1.0, 1.0,      // Triangulo 2
                 0.0, 0.0, 1.0,
-                1.0, 0.0, 1.0
+                1.0, 0.0, 1.0,
+
+                0.0, 0.6, 1.0,      // Triangulo 3
+                0.1, 0.0, 1.0,
+                1.0, 0.3, 1.0,
+
+                1.0, 0.0, 0.0,      // r,g,b vertice 1
+                1.0, 1.0, 0.0,      // Triangulo 4
+                0.0, 1.0, 0.0,
+
+                0.0, 0.6, 1.0,      // Triangulo 5
+                0.1, 0.0, 1.0,
+                1.0, 0.3, 1.0,
+
+                1.0, 0.0, 0.0,      // r,g,b vertice 1
+                1.0, 1.0, 0.0,      // Triangulo 6
+                0.0, 1.0, 0.0,
+
+                0.0, 0.6, 1.0,      // Triangulo 7
+                0.1, 0.0, 1.0,
+                1.0, 0.3, 1.0,
+
+                1.0, 0.0, 0.0,      // r,g,b vertice 1
+                1.0, 1.0, 0.0,      // Triangulo 8
+                0.0, 1.0, 0.0,
+
+                0.0, 0.6, 1.0,      // Triangulo 9
+                0.1, 0.0, 1.0,
+                1.0, 0.3, 1.0,
+
+                1.0, 0.0, 0.0,      // r,g,b vertice 1
+                1.0, 1.0, 0.0,      // Triangulo 10
+                0.0, 1.0, 0.0,
+
+                0.0, 0.6, 1.0,      // Triangulo 11
+                0.1, 0.0, 1.0,
+                1.0, 0.3, 1.0,
+
+                0.0, 0.6, 1.0,      // Triangulo 12
+                0.1, 0.0, 1.0,
+                1.0, 0.3, 1.0
             ];
             
             trianglesColorBuffer = gl.createBuffer();
@@ -186,7 +267,8 @@
             gl.bindBuffer(gl.ARRAY_BUFFER, trianglesColorBuffer);
             gl.vertexAttribPointer(vertexColorAttribute, 3, gl.FLOAT, false, 0, 0);
 
-            gl.drawArrays(gl.TRIANGLES, 0,6);
+            gl.drawArrays(gl.TRIANGLES, 0,12*3);
+
         }
 
         window.onload=initWebGL;
